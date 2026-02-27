@@ -8,7 +8,6 @@
 
 <meta name="description" content="Bulk food supply for seminars, birthdays, and corporate events in Occidental Mindoro. Packed meals and food trays available. Fast quotation response.">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
 
 <style>
@@ -23,30 +22,60 @@ body {
 header {
     background: linear-gradient(135deg, #0f3057, #1e90ff);
     color: white;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 40px 20px;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo {
-    width: 220px;
-    max-width: 90%;
-    margin-bottom: 20px;
+    width: 160px;
+    max-width: 100%;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
+.header-text {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header-text p {
+    margin: 8px 0;
+    font-size: 16px;
 }
 
 .btn {
     display: inline-block;
-    background: #ffffff;
+    background: white;
     color: #0f3057;
-    padding: 14px 28px;
-    margin-top: 20px;
+    padding: 12px 25px;
+    margin-top: 10px;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text {
+        padding-left: 0;
+        margin-top: 20px;
+    }
 }
 
 /* SECTIONS */
@@ -118,7 +147,7 @@ footer {
     padding: 30px;
 }
 
-/* FLOATING CHAT BUTTON */
+/* FLOATING CHAT */
 .chat-btn {
     position: fixed;
     bottom: 20px;
@@ -137,53 +166,26 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png" alt="OM Event Food Solutions Logo" class="logo">
-    <p>Bulk Food Supply for Events in Occidental Mindoro</p>
-    <p>Packed Meals • Food Trays • Event Food Orders</p>
-    <a href="#quote" class="btn">Request Food Quotation</a>
+    <div class="header-container">
+        <img src="logo.png" alt="OM Event Food Solutions Logo" class="logo">
+
+        <div class="header-text">
+            <h1>OM Event Food Solutions</h1>
+            <p>Bulk Food Supply for Events in Occidental Mindoro</p>
+            <p>Packed Meals • Food Trays • Event Food Orders</p>
+            <a href="#quote" class="btn">Request Food Quotation</a>
+        </div>
+    </div>
 </header>
 
 <section>
     <h2>Reliable Event Food Supply</h2>
-    <p>We provide organized and affordable bulk food solutions for seminars, meetings, birthdays, and special gatherings across selected areas in Occidental Mindoro.</p>
+    <p>We provide organized and affordable bulk food solutions for seminars, meetings, birthdays, and special gatherings.</p>
     <ul>
         <li>✔ Packed Meals for Trainings & Seminars</li>
         <li>✔ Food Trays for Meetings & Birthdays</li>
         <li>✔ Bulk Orders for School & LGU Events</li>
         <li>✔ Corporate & Community Food Supply</li>
-    </ul>
-</section>
-
-<section>
-    <h2>How It Works</h2>
-    <ol>
-        <li>Send your event details and food requirements</li>
-        <li>We prepare available menu options</li>
-        <li>Receive pricing based on quantity</li>
-        <li>Confirm order with reservation fee</li>
-    </ol>
-    <p><strong>Simple. Organized. Hassle-Free.</strong></p>
-</section>
-
-<section>
-    <h2>Food Order Options</h2>
-    <ul>
-        <li>• Rice Meals (Minimum Order Required)</li>
-        <li>• Combination Packed Meals</li>
-        <li>• Food Trays (Good for Sharing)</li>
-        <li>• Add-ons: Dessert & Drinks</li>
-    </ul>
-    <p><strong>Full menu list and food photos will be sent upon inquiry.</strong></p>
-</section>
-
-<section>
-    <h2>Why Choose OM Event Food Solutions?</h2>
-    <ul>
-        <li>✔ Organized Order Coordination</li>
-        <li>✔ Fast Response Time</li>
-        <li>✔ Budget-Friendly Food Options</li>
-        <li>✔ Bulk Order Management</li>
-        <li>✔ Serving Selected Areas in Occidental Mindoro</li>
     </ul>
 </section>
 
@@ -193,14 +195,6 @@ footer {
         <form id="quoteForm">
             <input type="text" placeholder="Full Name" required>
             <input type="text" placeholder="Contact Number" required>
-            <select required>
-                <option value="">Select Event Type</option>
-                <option>Seminar</option>
-                <option>Birthday</option>
-                <option>Corporate Event</option>
-                <option>Church Event</option>
-                <option>Other</option>
-            </select>
             <input type="date" required>
             <input type="number" placeholder="Estimated Quantity" required>
             <textarea placeholder="Food Preference / Additional Details"></textarea>
@@ -209,17 +203,10 @@ footer {
     </div>
 </section>
 
-<section class="cta-section">
-    <h2>Need Bulk Food for Your Event?</h2>
-    <p>Message us today and receive menu options and pricing within 1 hour.</p>
-    <a href="#quote">Get Instant Quote</a>
-</section>
-
 <footer>
     <p>OM Event Food Solutions</p>
     <p>Independent Event Food Solutions Provider</p>
     <p>Serving Selected Areas in Occidental Mindoro</p>
-    <p>For bulk food orders and inquiries, message us today.</p>
 </footer>
 
 <a href="https://m.me/YOURPAGE" class="chat-btn">Chat Us</a>
@@ -227,7 +214,7 @@ footer {
 <script>
 document.getElementById("quoteForm").addEventListener("submit", function(e){
     e.preventDefault();
-    alert("Thank you! Your food order request has been received. We will contact you shortly.");
+    alert("Thank you! Your request has been received. We will contact you shortly.");
 });
 </script>
 
